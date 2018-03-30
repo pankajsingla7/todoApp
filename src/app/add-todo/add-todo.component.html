@@ -1,0 +1,9 @@
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" [(ngModel)]="todoInput" (keyup.enter)="addTodo()"  placeholder="Todo...">
+  <span> <button (click)="addTodo()" class="addBtn">Add</button></span>
+</div>
+
+<ul id="myUL" *ngFor="let todoItem of todoList">
+  <li ><label>{{todoItem}}</label><button (click)="doneClicked()" class="destroy"></button></li> 
+</ul>
